@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7EB1FA720BE914700ACBBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1FA620BE914700ACBBAF /* AppDelegate.swift */; };
+		C7EB1FA920BE914700ACBBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1FA820BE914700ACBBAF /* ViewController.swift */; };
+		C7EB1FAC20BE914700ACBBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EB1FAA20BE914700ACBBAF /* Main.storyboard */; };
+		C7EB1FAE20BE914700ACBBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EB1FAD20BE914700ACBBAF /* Assets.xcassets */; };
+		C7EB1FB120BE914700ACBBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EB1FAF20BE914700ACBBAF /* LaunchScreen.storyboard */; };
+		CD4AE8016E67585B9FD64DB8 /* Pods_Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82949A95FA35FB3FF1A1775 /* Pods_Slack.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		64CE793C3EBDC9EFCDE7589B /* Pods-Slack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Slack/Pods-Slack.debug.xcconfig"; sourceTree = "<group>"; };
+		655B8034209DAD3E915CCCA8 /* Pods-Slack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Slack/Pods-Slack.release.xcconfig"; sourceTree = "<group>"; };
+		C7EB1FA320BE914700ACBBAF /* Slack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EB1FA620BE914700ACBBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7EB1FA820BE914700ACBBAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7EB1FAB20BE914700ACBBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7EB1FAD20BE914700ACBBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7EB1FB020BE914700ACBBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7EB1FB220BE914700ACBBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F82949A95FA35FB3FF1A1775 /* Pods_Slack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7EB1FA020BE914700ACBBAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4AE8016E67585B9FD64DB8 /* Pods_Slack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84A2B603F53B33A38832EE91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64CE793C3EBDC9EFCDE7589B /* Pods-Slack.debug.xcconfig */,
+				655B8034209DAD3E915CCCA8 /* Pods-Slack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE01FC88267F44804052BA34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F82949A95FA35FB3FF1A1775 /* Pods_Slack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7EB1F9A20BE914700ACBBAF = {
+			isa = PBXGroup;
+			children = (
+				C7EB1FA520BE914700ACBBAF /* Slack */,
+				C7EB1FA420BE914700ACBBAF /* Products */,
+				84A2B603F53B33A38832EE91 /* Pods */,
+				AE01FC88267F44804052BA34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7EB1FA420BE914700ACBBAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7EB1FA320BE914700ACBBAF /* Slack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EB1FA520BE914700ACBBAF /* Slack */ = {
+			isa = PBXGroup;
+			children = (
+				C7EB1FA620BE914700ACBBAF /* AppDelegate.swift */,
+				C7EB1FA820BE914700ACBBAF /* ViewController.swift */,
+				C7EB1FAA20BE914700ACBBAF /* Main.storyboard */,
+				C7EB1FAD20BE914700ACBBAF /* Assets.xcassets */,
+				C7EB1FAF20BE914700ACBBAF /* LaunchScreen.storyboard */,
+				C7EB1FB220BE914700ACBBAF /* Info.plist */,
+			);
+			path = Slack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7EB1FA220BE914700ACBBAF /* Slack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EB1FB520BE914700ACBBAF /* Build configuration list for PBXNativeTarget "Slack" */;
+			buildPhases = (
+				F42E104DD2159F8120A4284B /* [CP] Check Pods Manifest.lock */,
+				C7EB1F9F20BE914700ACBBAF /* Sources */,
+				C7EB1FA020BE914700ACBBAF /* Frameworks */,
+				C7EB1FA120BE914700ACBBAF /* Resources */,
+				DEDD3B06657997F52962D98E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Slack;
+			productName = Slack;
+			productReference = C7EB1FA320BE914700ACBBAF /* Slack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EB1F9B20BE914700ACBBAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Sehajbir;
+				TargetAttributes = {
+					C7EB1FA220BE914700ACBBAF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C7EB1F9E20BE914700ACBBAF /* Build configuration list for PBXProject "Slack" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7EB1F9A20BE914700ACBBAF;
+			productRefGroup = C7EB1FA420BE914700ACBBAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7EB1FA220BE914700ACBBAF /* Slack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7EB1FA120BE914700ACBBAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EB1FB120BE914700ACBBAF /* LaunchScreen.storyboard in Resources */,
+				C7EB1FAE20BE914700ACBBAF /* Assets.xcassets in Resources */,
+				C7EB1FAC20BE914700ACBBAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEDD3B06657997F52962D98E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Slack/Pods-Slack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Slack/Pods-Slack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42E104DD2159F8120A4284B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Slack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7EB1F9F20BE914700ACBBAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EB1FA920BE914700ACBBAF /* ViewController.swift in Sources */,
+				C7EB1FA720BE914700ACBBAF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7EB1FAA20BE914700ACBBAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EB1FAB20BE914700ACBBAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7EB1FAF20BE914700ACBBAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EB1FB020BE914700ACBBAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7EB1FB320BE914700ACBBAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7EB1FB420BE914700ACBBAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7EB1FB620BE914700ACBBAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64CE793C3EBDC9EFCDE7589B /* Pods-Slack.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UES3CL6253;
+				INFOPLIST_FILE = Slack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sehajbir.Slack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7EB1FB720BE914700ACBBAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655B8034209DAD3E915CCCA8 /* Pods-Slack.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UES3CL6253;
+				INFOPLIST_FILE = Slack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sehajbir.Slack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7EB1F9E20BE914700ACBBAF /* Build configuration list for PBXProject "Slack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EB1FB320BE914700ACBBAF /* Debug */,
+				C7EB1FB420BE914700ACBBAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EB1FB520BE914700ACBBAF /* Build configuration list for PBXNativeTarget "Slack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EB1FB620BE914700ACBBAF /* Debug */,
+				C7EB1FB720BE914700ACBBAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7EB1F9B20BE914700ACBBAF /* Project object */;
+}
