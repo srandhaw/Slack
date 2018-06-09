@@ -13,7 +13,7 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toLogin", sender: self)
+        performSegue(withIdentifier: TO_LOGIN, sender: self)
         
     }
     
@@ -22,6 +22,10 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
   self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func prepareForUnwind(for x: UIStoryboardSegue ) {
+        
     }
 
     
