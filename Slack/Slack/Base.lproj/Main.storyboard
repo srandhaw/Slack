@@ -252,7 +252,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-BN-uxY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-BN-uxY" customClass="RoundedButton" customModule="Slack" customModuleProvider="target">
                                 <rect key="frame" x="82" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -347,7 +347,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-hL-8uf">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -377,7 +377,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-O9-IiL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-O9-IiL" customClass="RoundedButton" customModule="Slack" customModuleProvider="target">
                                 <rect key="frame" x="77" y="656" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -387,6 +387,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="TRR-ij-yUU" eventType="touchUpInside" id="5uf-Wc-Fky"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzt-jH-Qsm">
                                 <rect key="frame" x="110.33333333333331" y="80" width="193.33333333333337" height="26.333333333333329"/>
@@ -407,6 +410,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseAvatarBtnPressed:" destination="TRR-ij-yUU" eventType="touchUpInside" id="fIa-el-yO8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMW-vD-Zb9">
                                 <rect key="frame" x="84" y="507" width="246" height="36"/>
@@ -414,6 +420,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateBackgroundColorBtnPressed:" destination="TRR-ij-yUU" eventType="touchUpInside" id="Zmx-Fb-sQD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -436,6 +445,10 @@
                         <viewLayoutGuide key="safeArea" id="vek-0N-rGE"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="Mwh-wo-Ww0" id="BB5-Ko-N9N"/>
+                        <outlet property="passwordTxt" destination="Czw-LG-kNu" id="ZQw-3i-B5I"/>
+                        <outlet property="userImg" destination="F0A-ep-kpB" id="D00-5M-Tss"/>
+                        <outlet property="usernameTxt" destination="jSx-4W-9DR" id="adb-dJ-Knw"/>
                         <segue destination="rjn-rc-aYm" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindFor:" id="qmk-ZQ-FRw"/>
                     </connections>
                 </viewController>
