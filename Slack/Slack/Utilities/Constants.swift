@@ -25,3 +25,4 @@ let USER_EMAIL = "email"
 //url constants
 let BASE_URL = "https://slack-clone--.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
+let LOGIN_URL = "\(BASE_URL)account/login"
