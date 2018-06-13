@@ -60,7 +60,8 @@ class AuthService{
             }
             else{
                 completion(false)
-                debugPrint(response.result.error as Any)
+               // debugPrint(response.result.error as Any)
+                print("\n\n problem in register user in AuthService \n\n")
             }
         }
         
@@ -86,7 +87,7 @@ class AuthService{
                     self.userEmail = json["user"].stringValue
                     self.authToken = json["token"].stringValue
                     self.isLoggedIn = true
-                }catch{print("JSON - problem")}
+                }catch{print("\n\nJSON - problem in login user in AuthService\n\n")}
                 
                 
                 
@@ -101,4 +102,50 @@ class AuthService{
     }
     
     
+    func createUser(name: String,email: String,avatarName: String,avatarColor: String, completion: @escaping CompletionHandler){
+        
+        let email1 = email.lowercased()
+        
+        let header = [
+            "Authorization":"Bearer \(AuthService.instance.authToken)",
+            "Content-Type":"application/json; charset=utf-8"
+        ]
+        let body:[String: Any] = [
+            "name": name,
+            "email": email1,
+            "avatarName": avatarName,
+            "avatarColor": avatarColor
+        ]
+        
+        Alamofire.request(ADD_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            print("\n\(response.result.error)\n")
+            if(response.result.error==nil){
+                
+                if let json = response.result.value as? Dictionary<String,Any>{
+                     let id = json["_id"] as? String
+                       
+                    
+                    let color = json["avatarColor"] as? String
+                    
+                    let avatarName = json["avatarName"] as? String
+                    
+                     let email = json["email"] as? String
+                     let name = json["name"] as? String
+                    UserDataService.instance.setUserData(id: id!, email: email!, name: name!, avatarName: avatarName!, avatarColor: avatarColor)
+                }
+                    
+                
+              
+                
+                
+                completion(true)
+            }else{
+                
+                completion(false)
+            }
+        }
+        
+    }
+    
+
 }
