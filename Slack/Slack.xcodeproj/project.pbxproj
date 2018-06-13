@@ -10,6 +10,8 @@
 		C70E25AA20CE5CD500DC56A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25A920CE5CD500DC56A0 /* AuthService.swift */; };
 		C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25AB20CEA71F00DC56A0 /* RoundedButton.swift */; };
 		C70E25B020CFF51200DC56A0 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25AF20CFF51200DC56A0 /* UserDataService.swift */; };
+		C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */; };
+		C74845BB20D14653004ADBD9 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845BA20D14653004ADBD9 /* AvatarCell.swift */; };
 		C75A085420CC741300051F2F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A085320CC741300051F2F /* LoginVC.swift */; };
 		C75A085620CC764A00051F2F /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A085520CC764A00051F2F /* CreateAccountVC.swift */; };
 		C78D843B20BEC51A003DA2A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D843A20BEC51A003DA2A2 /* Constants.swift */; };
@@ -30,6 +32,8 @@
 		C70E25A920CE5CD500DC56A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C70E25AB20CEA71F00DC56A0 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C70E25AF20CFF51200DC56A0 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVCViewController.swift; sourceTree = "<group>"; };
+		C74845BA20D14653004ADBD9 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C75A085320CC741300051F2F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C75A085520CC764A00051F2F /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		C78D843A20BEC51A003DA2A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				C7EB1FC320BE9D6200ACBBAF /* ChannelVC.swift */,
 				C75A085320CC741300051F2F /* LoginVC.swift */,
 				C75A085520CC764A00051F2F /* CreateAccountVC.swift */,
+				C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				C7EB1FC620BEA4C100ACBBAF /* GradientView.swift */,
 				C70E25AB20CEA71F00DC56A0 /* RoundedButton.swift */,
+				C74845BA20D14653004ADBD9 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,12 +295,14 @@
 			files = (
 				C7EB1FC220BE9D4C00ACBBAF /* ChatVC.swift in Sources */,
 				C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */,
+				C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */,
 				C7EB1FC420BE9D6200ACBBAF /* ChannelVC.swift in Sources */,
 				C70E25B020CFF51200DC56A0 /* UserDataService.swift in Sources */,
 				C75A085620CC764A00051F2F /* CreateAccountVC.swift in Sources */,
 				C70E25AA20CE5CD500DC56A0 /* AuthService.swift in Sources */,
 				C75A085420CC741300051F2F /* LoginVC.swift in Sources */,
 				C7EB1FC720BEA4C100ACBBAF /* GradientView.swift in Sources */,
+				C74845BB20D14653004ADBD9 /* AvatarCell.swift in Sources */,
 				C7EB1FA720BE914700ACBBAF /* AppDelegate.swift in Sources */,
 				C7EB1FC520BE9FD100ACBBAF /* SWRevealViewController.m in Sources */,
 				C78D843B20BEC51A003DA2A2 /* Constants.swift in Sources */,
