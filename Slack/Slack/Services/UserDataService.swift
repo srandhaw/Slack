@@ -15,7 +15,7 @@ class UserDataService{
     public private(set) var id = ""
     public private(set) var email = ""
     public private(set) var name = ""
-    public private(set) var avatarName = ""
+    public private(set) var avatarName = "profileDefault"
     public private(set) var avatarColor = ""
     
     func setUserData(id: String, email: String, name: String, avatarName: String, avatarColor: String){
