@@ -107,7 +107,7 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xBb-Bm-bZI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xBb-Bm-bZI" customClass="CircleImage" customModule="Slack" customModuleProvider="target">
                                 <rect key="frame" x="20" y="617" width="99" height="99"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crV-Sz-Gp8">
@@ -296,6 +296,8 @@
                         <viewLayoutGuide key="safeArea" id="8dA-sS-ojK"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="38y-Cp-3gH" id="a0F-lA-saj"/>
+                        <outlet property="usernameTxt" destination="qlm-i2-0SZ" id="Vwq-c1-jXQ"/>
                         <segue destination="TRR-ij-yUU" kind="show" identifier="toCreateAccount" id="tea-vc-hAU"/>
                     </connections>
                 </viewController>
@@ -397,15 +399,15 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="F0A-ep-kpB">
-                                <rect key="frame" x="139.66666666666669" y="337.33333333333331" width="135.00000000000006" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="F0A-ep-kpB" customClass="CircleImage" customModule="Slack" customModuleProvider="target">
+                                <rect key="frame" x="157" y="337.33333333333331" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="9Ay-S5-Qq5"/>
-                                    <constraint firstAttribute="width" constant="135" id="eFU-iy-iC0"/>
+                                    <constraint firstAttribute="height" constant="100" id="9r2-pO-Wz8"/>
+                                    <constraint firstAttribute="width" constant="100" id="rdf-aS-Kab"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBA-pw-TPj">
-                                <rect key="frame" x="142" y="463" width="130" height="36"/>
+                                <rect key="frame" x="142" y="443" width="130" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,7 +417,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMW-vD-Zb9">
-                                <rect key="frame" x="84" y="507" width="246" height="36"/>
+                                <rect key="frame" x="84" y="487" width="246" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -424,9 +426,19 @@
                                     <action selector="generateBackgroundColorBtnPressed:" destination="TRR-ij-yUU" eventType="touchUpInside" id="Zmx-Fb-sQD"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-5S-k4X">
+                                <rect key="frame" x="182.66666666666666" y="283.66666666666669" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H9x-3i-7hg"/>
+                                    <constraint firstAttribute="width" constant="50" id="Z8u-te-M6i"/>
+                                </constraints>
+                                <color key="color" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Qsj-5S-k4X" firstAttribute="centerY" secondItem="ree-LU-tOQ" secondAttribute="centerY" constant="-60" id="1ca-7g-uzj"/>
+                            <constraint firstItem="Qsj-5S-k4X" firstAttribute="centerX" secondItem="ree-LU-tOQ" secondAttribute="centerX" id="1x0-qM-x7b"/>
                             <constraint firstItem="F0A-ep-kpB" firstAttribute="top" secondItem="Meb-7Y-2M3" secondAttribute="bottom" constant="55" id="36S-z0-ToP"/>
                             <constraint firstItem="YBA-pw-TPj" firstAttribute="centerX" secondItem="ree-LU-tOQ" secondAttribute="centerX" id="6Qp-Cd-inF"/>
                             <constraint firstItem="F0A-ep-kpB" firstAttribute="centerX" secondItem="ree-LU-tOQ" secondAttribute="centerX" id="L43-Q6-imR"/>
@@ -447,6 +459,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="Mwh-wo-Ww0" id="BB5-Ko-N9N"/>
                         <outlet property="passwordTxt" destination="Czw-LG-kNu" id="ZQw-3i-B5I"/>
+                        <outlet property="spinner" destination="Qsj-5S-k4X" id="9Ss-MK-psn"/>
                         <outlet property="userImg" destination="F0A-ep-kpB" id="D00-5M-Tss"/>
                         <outlet property="usernameTxt" destination="jSx-4W-9DR" id="adb-dJ-Knw"/>
                         <segue destination="rjn-rc-aYm" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindFor:" id="qmk-ZQ-FRw"/>
