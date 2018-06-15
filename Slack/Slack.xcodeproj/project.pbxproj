@@ -10,6 +10,8 @@
 		C70E25AA20CE5CD500DC56A0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25A920CE5CD500DC56A0 /* AuthService.swift */; };
 		C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25AB20CEA71F00DC56A0 /* RoundedButton.swift */; };
 		C70E25B020CFF51200DC56A0 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25AF20CFF51200DC56A0 /* UserDataService.swift */; };
+		C70EAFCC20D3EC84002C04E0 /* ProfileVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EAFCA20D3EC84002C04E0 /* ProfileVCViewController.swift */; };
+		C70EAFCD20D3EC84002C04E0 /* ProfileVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70EAFCB20D3EC84002C04E0 /* ProfileVCViewController.xib */; };
 		C737DC0D20D271FF00C505A5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C737DC0C20D271FF00C505A5 /* CircleImage.swift */; };
 		C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */; };
 		C74845BB20D14653004ADBD9 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845BA20D14653004ADBD9 /* AvatarCell.swift */; };
@@ -33,6 +35,8 @@
 		C70E25A920CE5CD500DC56A0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C70E25AB20CEA71F00DC56A0 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C70E25AF20CFF51200DC56A0 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		C70EAFCA20D3EC84002C04E0 /* ProfileVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCViewController.swift; sourceTree = "<group>"; };
+		C70EAFCB20D3EC84002C04E0 /* ProfileVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCViewController.xib; sourceTree = "<group>"; };
 		C737DC0C20D271FF00C505A5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVCViewController.swift; sourceTree = "<group>"; };
 		C74845BA20D14653004ADBD9 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C70EAFCE20D3ECA8002C04E0 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				C70EAFCB20D3EC84002C04E0 /* ProfileVCViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		C78D843920BEC4F3003DA2A2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		C7EB1FA520BE914700ACBBAF /* Slack */ = {
 			isa = PBXGroup;
 			children = (
+				C70EAFCE20D3ECA8002C04E0 /* XIBs */,
 				C70E25A820CD661400DC56A0 /* Services */,
 				C78D843920BEC4F3003DA2A2 /* Utilities */,
 				C7EB1FC020BE9D2800ACBBAF /* View */,
@@ -154,6 +167,7 @@
 				C75A085320CC741300051F2F /* LoginVC.swift */,
 				C75A085520CC764A00051F2F /* CreateAccountVC.swift */,
 				C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */,
+				C70EAFCA20D3EC84002C04E0 /* ProfileVCViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EB1FB120BE914700ACBBAF /* LaunchScreen.storyboard in Resources */,
+				C70EAFCD20D3EC84002C04E0 /* ProfileVCViewController.xib in Resources */,
 				C7EB1FAE20BE914700ACBBAF /* Assets.xcassets in Resources */,
 				C7EB1FAC20BE914700ACBBAF /* Main.storyboard in Resources */,
 			);
@@ -298,6 +313,7 @@
 			files = (
 				C7EB1FC220BE9D4C00ACBBAF /* ChatVC.swift in Sources */,
 				C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */,
+				C70EAFCC20D3EC84002C04E0 /* ProfileVCViewController.swift in Sources */,
 				C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */,
 				C737DC0D20D271FF00C505A5 /* CircleImage.swift in Sources */,
 				C7EB1FC420BE9D6200ACBBAF /* ChannelVC.swift in Sources */,
