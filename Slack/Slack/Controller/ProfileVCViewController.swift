@@ -18,6 +18,8 @@ class ProfileVCViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let close = UITapGestureRecognizer(target: self, action: #selector(ProfileVCViewController.closeTap(_:)))
+        bgView.addGestureRecognizer(close)
         userName.text = UserDataService.instance.name
         userEmail.text = UserDataService.instance.email
         profileImg.image = UIImage(named: UserDataService.instance.avatarName)
@@ -42,6 +44,10 @@ class ProfileVCViewController: UIViewController {
         
         NotificationCenter.default.post(name: Notification.Name("notifUserDataChanged"), object: nil)
         UserDataService.instance.logoutUser()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func closeTap(_ recog: UITapGestureRecognizer){
         dismiss(animated: true, completion: nil)
     }
     
