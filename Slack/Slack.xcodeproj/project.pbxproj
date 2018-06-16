@@ -12,6 +12,8 @@
 		C70E25B020CFF51200DC56A0 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E25AF20CFF51200DC56A0 /* UserDataService.swift */; };
 		C70EAFCC20D3EC84002C04E0 /* ProfileVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EAFCA20D3EC84002C04E0 /* ProfileVCViewController.swift */; };
 		C70EAFCD20D3EC84002C04E0 /* ProfileVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70EAFCB20D3EC84002C04E0 /* ProfileVCViewController.xib */; };
+		C70EAFD020D52085002C04E0 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EAFCF20D52085002C04E0 /* MessageService.swift */; };
+		C70EAFD220D520C7002C04E0 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EAFD120D520C7002C04E0 /* Channel.swift */; };
 		C737DC0D20D271FF00C505A5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C737DC0C20D271FF00C505A5 /* CircleImage.swift */; };
 		C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */; };
 		C74845BB20D14653004ADBD9 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845BA20D14653004ADBD9 /* AvatarCell.swift */; };
@@ -37,6 +39,8 @@
 		C70E25AF20CFF51200DC56A0 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		C70EAFCA20D3EC84002C04E0 /* ProfileVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCViewController.swift; sourceTree = "<group>"; };
 		C70EAFCB20D3EC84002C04E0 /* ProfileVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCViewController.xib; sourceTree = "<group>"; };
+		C70EAFCF20D52085002C04E0 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		C70EAFD120D520C7002C04E0 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		C737DC0C20D271FF00C505A5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVCViewController.swift; sourceTree = "<group>"; };
 		C74845BA20D14653004ADBD9 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			children = (
 				C70E25A920CE5CD500DC56A0 /* AuthService.swift */,
 				C70E25AF20CFF51200DC56A0 /* UserDataService.swift */,
+				C70EAFCF20D52085002C04E0 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		C7EB1FBF20BE9D1F00ACBBAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C70EAFD120D520C7002C04E0 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,7 +321,9 @@
 				C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */,
 				C70EAFCC20D3EC84002C04E0 /* ProfileVCViewController.swift in Sources */,
 				C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */,
+				C70EAFD220D520C7002C04E0 /* Channel.swift in Sources */,
 				C737DC0D20D271FF00C505A5 /* CircleImage.swift in Sources */,
+				C70EAFD020D52085002C04E0 /* MessageService.swift in Sources */,
 				C7EB1FC420BE9D6200ACBBAF /* ChannelVC.swift in Sources */,
 				C70E25B020CFF51200DC56A0 /* UserDataService.swift in Sources */,
 				C75A085620CC764A00051F2F /* CreateAccountVC.swift in Sources */,
