@@ -31,6 +31,23 @@ class ChannelVC: UIViewController {
   self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: Notification.Name("notifUserDataChanged"), object: nil)
+        
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(AuthService.instance.isLoggedIn){
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            let bgc = UserDataService.instance.avatarColor
+            userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
+        }
+        else{
+            loginBtn.setTitle("Login", for: .normal)
+            userImg.image = UIImage(named: "menuProfileIcon")
+            userImg.backgroundColor = UIColor.clear
+        }
     }
     
     @IBAction func prepareForUnwind(for x: UIStoryboardSegue ) {
@@ -44,8 +61,15 @@ class ChannelVC: UIViewController {
             let bgc = UserDataService.instance.avatarColor
             userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
         }
+        else{
+            loginBtn.setTitle("Login", for: .normal)
+            userImg.image = UIImage(named: "menuProfileIcon")
+            userImg.backgroundColor = UIColor.clear
+        }
         
     }
+    
+    
 
     
 

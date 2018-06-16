@@ -263,6 +263,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="5UU-de-ms7" eventType="touchUpInside" id="Wbp-Bt-0UY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-0E-si2">
                                 <rect key="frame" x="82" y="336" width="250" height="50"/>
@@ -280,6 +283,10 @@
                                     <action selector="signUpBtnPressed:" destination="5UU-de-ms7" eventType="touchUpInside" id="k3j-Do-xAl"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="azb-7l-let">
+                                <rect key="frame" x="188.66666666666666" y="247.66666666666669" width="37" height="37.000000000000057"/>
+                                <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -290,14 +297,17 @@
                             <constraint firstItem="OLo-bY-CvG" firstAttribute="top" secondItem="8dA-sS-ojK" secondAttribute="top" constant="8" id="kuj-NS-m9i"/>
                             <constraint firstItem="Bh5-fu-lTy" firstAttribute="centerX" secondItem="5uo-cm-kTg" secondAttribute="centerX" id="nL5-YD-0XG"/>
                             <constraint firstItem="Bh5-fu-lTy" firstAttribute="top" secondItem="OvS-bQ-TKp" secondAttribute="bottom" constant="40" id="sk7-Xn-0gN"/>
+                            <constraint firstItem="azb-7l-let" firstAttribute="centerX" secondItem="5uo-cm-kTg" secondAttribute="centerX" id="so4-Ms-e5R"/>
                             <constraint firstItem="uEf-0E-si2" firstAttribute="centerX" secondItem="5uo-cm-kTg" secondAttribute="centerX" id="uTx-gZ-B7e"/>
                             <constraint firstItem="ON8-BN-uxY" firstAttribute="top" secondItem="Bh5-fu-lTy" secondAttribute="bottom" constant="40" id="w3N-GD-iFG"/>
+                            <constraint firstItem="azb-7l-let" firstAttribute="centerY" secondItem="5uo-cm-kTg" secondAttribute="centerY" constant="-102" id="xyP-Sk-Ecg"/>
                             <constraint firstItem="OvS-bQ-TKp" firstAttribute="top" secondItem="8dA-sS-ojK" secondAttribute="top" constant="60" id="zlo-CM-YFb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8dA-sS-ojK"/>
                     </view>
                     <connections>
                         <outlet property="passwordTxt" destination="38y-Cp-3gH" id="a0F-lA-saj"/>
+                        <outlet property="spinner" destination="azb-7l-let" id="dQA-jw-XdJ"/>
                         <outlet property="usernameTxt" destination="qlm-i2-0SZ" id="Vwq-c1-jXQ"/>
                         <segue destination="TRR-ij-yUU" kind="show" identifier="toCreateAccount" id="tea-vc-hAU"/>
                     </connections>
