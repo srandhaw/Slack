@@ -25,6 +25,7 @@ class MessageService{
         
         Alamofire.request(GET_CHANNELS_URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             
+            
             if(response.result.error==nil){
                 
                 guard let data = response.data else { return }
