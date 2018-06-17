@@ -58,6 +58,12 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         
     }
     
+    @IBAction func addChannelBtnPressed(_ sender: Any) {
+        let channel = AddChannelVC()
+        channel.modalPresentationStyle = .custom
+        present(channel, animated: true, completion: nil)
+    }
+    
     
     @objc func userDataDidChange(_ notif: Notification){
         if(AuthService.instance.isLoggedIn){
