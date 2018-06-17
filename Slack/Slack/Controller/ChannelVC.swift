@@ -65,9 +65,11 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     }
     
     @IBAction func addChannelBtnPressed(_ sender: Any) {
+        if(AuthService.instance.isLoggedIn){
         let channel = AddChannelVC()
         channel.modalPresentationStyle = .custom
         present(channel, animated: true, completion: nil)
+        }
     }
     
     
@@ -82,6 +84,7 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
         
     }
