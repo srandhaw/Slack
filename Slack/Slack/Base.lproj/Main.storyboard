@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="127" width="342" height="470"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6R4-6b-m4T" customClass="ChannelCell" customModule="Slack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="6R4-6b-m4T" customClass="ChannelCell" customModule="Slack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6R4-6b-m4T" id="umG-ij-wC8">
@@ -132,7 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-Fy-3es">
-                                                    <rect key="frame" x="28" y="12.666666666666664" width="65.666666666666671" height="20"/>
+                                                    <rect key="frame" x="8" y="12.666666666666664" width="65.666666666666671" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fUE-Fy-3es" firstAttribute="centerY" secondItem="umG-ij-wC8" secondAttribute="centerY" id="Xcq-GJ-fUt"/>
-                                                <constraint firstItem="fUE-Fy-3es" firstAttribute="leading" secondItem="umG-ij-wC8" secondAttribute="leadingMargin" constant="20" id="hba-fw-UAB"/>
+                                                <constraint firstItem="fUE-Fy-3es" firstAttribute="leading" secondItem="umG-ij-wC8" secondAttribute="leadingMargin" id="hba-fw-UAB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

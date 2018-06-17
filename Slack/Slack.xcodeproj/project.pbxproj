@@ -17,6 +17,7 @@
 		C70EAFD420D53109002C04E0 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EAFD320D53109002C04E0 /* ChannelCell.swift */; };
 		C72817CA20D675770030D63A /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72817C820D675770030D63A /* AddChannelVC.swift */; };
 		C72817CB20D675770030D63A /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72817C920D675770030D63A /* AddChannelVC.xib */; };
+		C72817CD20D67DE60030D63A /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72817CC20D67DE60030D63A /* SocketService.swift */; };
 		C737DC0D20D271FF00C505A5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C737DC0C20D271FF00C505A5 /* CircleImage.swift */; };
 		C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */; };
 		C74845BB20D14653004ADBD9 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74845BA20D14653004ADBD9 /* AvatarCell.swift */; };
@@ -47,6 +48,7 @@
 		C70EAFD320D53109002C04E0 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		C72817C820D675770030D63A /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		C72817C920D675770030D63A /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		C72817CC20D67DE60030D63A /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		C737DC0C20D271FF00C505A5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		C74845B820D1433E004ADBD9 /* AvatarPickerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVCViewController.swift; sourceTree = "<group>"; };
 		C74845BA20D14653004ADBD9 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				C70E25A920CE5CD500DC56A0 /* AuthService.swift */,
 				C70E25AF20CFF51200DC56A0 /* UserDataService.swift */,
 				C70EAFCF20D52085002C04E0 /* MessageService.swift */,
+				C72817CC20D67DE60030D63A /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72817CD20D67DE60030D63A /* SocketService.swift in Sources */,
 				C7EB1FC220BE9D4C00ACBBAF /* ChatVC.swift in Sources */,
 				C70EAFD420D53109002C04E0 /* ChannelCell.swift in Sources */,
 				C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */,

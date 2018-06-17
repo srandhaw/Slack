@@ -18,7 +18,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChannelVC" customModule="Slack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="yQV-Id-owR" id="YEE-wd-rIH"/>
-                <outlet property="createChannelBtnPressed" destination="s4v-bH-Jf6" id="ijz-SA-yop"/>
                 <outlet property="descriptionTxt" destination="Fxx-pM-yLm" id="1JY-Hx-KmW"/>
                 <outlet property="nameTxt" destination="arG-vM-g1n" id="1Xs-hm-0bP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -103,6 +102,9 @@
                             <state key="normal" title="Create Channel">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="createChannelBtnPressed:" destination="-1" eventType="touchUpInside" id="i6A-Ve-Mju"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
