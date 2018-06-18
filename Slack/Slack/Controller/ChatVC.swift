@@ -11,14 +11,16 @@ import UIKit
 class ChatVC: UIViewController {
 
     @IBOutlet weak var menuBtn: UIButton!
+    @IBOutlet weak var channelNameLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.dataChanged(notif:)), name: Notification.Name("notifUserDataChanged"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: Notification.Name("channelSelected"), object: nil)
         
        if(AuthService.instance.isLoggedIn){
             AuthService.instance.findUserByEmail(completion: { (success) in
@@ -26,17 +28,20 @@ class ChatVC: UIViewController {
                 
             })
         }
+       else{
+        channelNameLbl.text = "Please Log In!"
+        }
         
        
-       /*
-        MessageService.instance.findAllChannels { (success) in
-            
-        }*/
+        
+    }
+    
+    @objc func channelSelected(_ notif: Notification){
+        channelNameLbl.text = MessageService.instance.selectedChannel?.channelTitle
+        
     }
 
-    @objc func dataChanged(notif: Notification){
-    
-    }
+   
   
 
    

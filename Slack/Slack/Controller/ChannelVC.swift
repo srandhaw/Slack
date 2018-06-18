@@ -35,13 +35,21 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
   self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: Notification.Name("notifUserDataChanged"), object: nil)
-        SocketService.instance.getChannel { (success) in
+        
+        MessageService.instance.findAllChannels { (success) in
+            if(success){
+                  self.tableView.reloadData()
+            }
+        }
+ 
+        
+       SocketService.instance.getChannel { (success) in
             
             if(success){
                 self.tableView.reloadData()
             }
         }
-        
+      
         
         
     }
@@ -52,12 +60,17 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             let bgc = UserDataService.instance.avatarColor
             userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
+           // self.tableView.reloadData()
+            
         }
         else{
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+           
         }
+        
+     
     }
     
     @IBAction func prepareForUnwind(for x: UIStoryboardSegue ) {
@@ -79,15 +92,22 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             let bgc = UserDataService.instance.avatarColor
             userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
+            
+            
+            
         }
         else{
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
-            tableView.reloadData()
+            
         }
         
+        
+        
     }
+    
+   
     
     //tableView functions
     
@@ -111,7 +131,10 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let channel = MessageService.instance.channels[indexPath.row]
+        MessageService.instance.selectedChannel = channel
+        NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
+        self.revealViewController().revealToggle(animated: true)
     }
     
     
