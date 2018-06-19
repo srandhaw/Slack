@@ -22,12 +22,9 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: Notification.Name("notifUserDataChanged"), object: nil)
-        
-        MessageService.instance.findAllChannels { (success) in
-            if(success){
-                  self.tableView.reloadData()
-            }
-        }
+            
+            NotificationCenter.default.post(name: Notification.Name("notifUserDataChanged"), object: nil)
+            
             
         SocketService.instance.getChannel { (success) in
             
@@ -38,20 +35,27 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         if(AuthService.instance.isLoggedIn){
+            
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             let bgc = UserDataService.instance.avatarColor
             userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
-           // self.tableView.reloadData()
+           
+           
             
         }
         else{
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            AuthService.instance.isLoggedIn = false
+            MessageService.instance.clearChannels()
+            self.tableView.reloadData()
            
         }
+        
         
      
     }
@@ -86,13 +90,25 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             let bgc = UserDataService.instance.avatarColor
             userImg.backgroundColor = UserDataService.instance.returnUIColor(component: bgc)
+            NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
+            
+            MessageService.instance.findAllChannels(completion: { (success) in
+                if(success){
+                    self.tableView.reloadData()
+                }
+            })
             }
         else{
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            AuthService.instance.isLoggedIn = false
+            MessageService.instance.clearChannels()
+            tableView.reloadData()
             
         }
+        
+        
         
         
         

@@ -43,7 +43,7 @@ class ProfileVCViewController: UIViewController {
     @IBAction func logoutBtnPressed(_ sender: Any) {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: Notification.Name("notifUserDataChanged"), object: nil)
-        
+        NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
         dismiss(animated: true, completion: nil)
     }
     

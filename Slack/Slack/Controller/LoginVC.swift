@@ -46,10 +46,22 @@ class LoginVC: UIViewController {
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if(success){
                         NotificationCenter.default.post(name: Notification.Name("notifUserDataChanged"), object: nil)
+                        NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
                         self.spinner.isHidden = false
                         self.spinner.stopAnimating()
                         self.dismiss(animated: true, completion: nil)
                         
+                    }
+                    else{
+                        NotificationCenter.default.post(name: Notification.Name("notifUserDataChanged"), object: nil)
+                        NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
+                        self.spinner.isHidden = true
+                        self.spinner.stopAnimating()
+                        self.usernameTxt.text = "Wrong details"
+                        self.passwordTxt.text = ""
+                        AuthService.instance.isLoggedIn = false
+                        
+                       // self.dismiss(animated: true, completion: nil)
                     }
                 })
             }
