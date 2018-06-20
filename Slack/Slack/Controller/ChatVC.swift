@@ -35,9 +35,22 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
         
+        SocketService.instance.getMessage { (newMessage) in
+            if(newMessage.channelID == MessageService.instance.selectedChannel?.id){
+                MessageService.instance.messages.append(newMessage)
+                self.tableView.reloadData()
+               
+                if(MessageService.instance.messages.count>0){
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+                
+            }
+        }
+        
        
         
-        SocketService.instance.getMessage { (success) in
+    /*    SocketService.instance.getMessage { (success) in
             
             if(success){
                 self.tableView.reloadData()
@@ -46,7 +59,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
                 }
             }
-        }
+        }*/
         
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }

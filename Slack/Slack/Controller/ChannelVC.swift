@@ -32,6 +32,13 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
                 self.tableView.reloadData()
             }
         }
+            
+            SocketService.instance.getMessage { (newMessage) in
+                if(newMessage.channelID != MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn){
+                    MessageService.instance.unreadChannels.append(newMessage.channelID)
+                    self.tableView.reloadData()
+                }
+            }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -145,6 +152,14 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         MessageService.instance.findAllMessagesForChannel(channelId: (MessageService.instance.selectedChannel?.id)!) { (success) in
             if(success){
                 NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
+                if(MessageService.instance.unreadChannels.count > 0){
+                    MessageService.instance.unreadChannels = MessageService.instance.unreadChannels.filter{$0 != channel.id}
+                }
+                
+                let index = IndexPath(row: indexPath.row, section: 0)
+                tableView.reloadRows(at: [index], with: .none)
+                tableView.selectRow(at: index, animated: true, scrollPosition: .none)
+                
                 self.revealViewController().revealToggle(animated: true)
             }
         }
