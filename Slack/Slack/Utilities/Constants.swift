@@ -9,7 +9,7 @@
 import Foundation
 
 typealias CompletionHandler = (_ Success: Bool)->()
-
+//(_ typingUsers: [String: String]) -> Void)
 //Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"

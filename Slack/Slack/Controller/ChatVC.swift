@@ -13,12 +13,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //Variable
     var isTyping = false
 
-    //Outlet
+    //Outlets
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxt: UITextField!
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var typingUsersLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,45 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
                     self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
                 }
+            }
+        }
+        
+        SocketService.instance.getTypingUsers { (typingUsers) in
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+           
+            var names = ""
+            var number = 0
+            
+            for (name, channel) in typingUsers{
+                if(name != UserDataService.instance.name && channel == channelId){
+                    if(number == 0){
+                        names = name
+                    }
+                    else {
+                        names = "\(names), \(name)"
+                    }
+                    number += 1
+                }
+                
+            }
+            
+            if(number>0 && AuthService.instance.isLoggedIn){
+                
+                if(number == 1){
+                    self.typingUsersLabel.text = "\(names) is typing..."
+                    
+                }
+                 else if(number>1){
+                    self.typingUsersLabel.text = "\(names) are typing..."
+                }
+                else{
+                    self.typingUsersLabel.text = ""
+                }
+                
+                
+            }
+            else{
+                self.typingUsersLabel.text = ""
             }
         }
         
@@ -128,7 +168,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if(success){
                     self.messageTxt.text = ""
                     self.messageTxt.resignFirstResponder()
-                    
+                    SocketService.instance.manager.defaultSocket.emit("stopType", UserDataService.instance.name, (MessageService.instance.selectedChannel?.id)!)
                 }
             })
         }
@@ -139,10 +179,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if(messageTxt.text==""){
             isTyping = false
             sendBtn.isHidden = true
+            SocketService.instance.manager.defaultSocket.emit("stopType", UserDataService.instance.name, (MessageService.instance.selectedChannel?.id)!)
         }
         else{
             sendBtn.isHidden = false
             isTyping = true
+            SocketService.instance.manager.defaultSocket.emit("startType", UserDataService.instance.name, (MessageService.instance.selectedChannel?.id)!)
         }
         
     }
