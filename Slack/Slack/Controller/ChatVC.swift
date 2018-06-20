@@ -9,7 +9,11 @@
 import UIKit
 
 class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //Variable
+    var isTyping = false
 
+    //Outlet
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxt: UITextField!
@@ -20,6 +24,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        sendBtn.isHidden = true
         
         //dynamic tableview height
         tableView.estimatedRowHeight = 80
@@ -29,8 +34,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
         
-        self.messageTxt.isHidden = false
-        self.sendBtn.isHidden = false
+       
+        
+        SocketService.instance.getMessage { (success) in
+            
+            if(success){
+                self.tableView.reloadData()
+                if(MessageService.instance.messages.count>0){
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+            }
+        }
         
         messageTxt.attributedPlaceholder = NSAttributedString(string: "message", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.423529923, green: 0.6870478392, blue: 0.8348321319, alpha: 1)])
         
@@ -85,6 +100,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        sendBtn.isHidden = true
+    }
+    
     @objc func channelSelected(_ notif: Notification){
         if(AuthService.instance.isLoggedIn){
         channelNameLbl.text = MessageService.instance.selectedChannel?.channelTitle
@@ -97,7 +116,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.messageTxt.isHidden = true
             self.sendBtn.isHidden = true
         }
-        
+        sendBtn.isHidden = true
     }
 
     @IBAction func sendBtnPressed(_ sender: Any) {
@@ -116,6 +135,17 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if(messageTxt.text==""){
+            isTyping = false
+            sendBtn.isHidden = true
+        }
+        else{
+            sendBtn.isHidden = false
+            isTyping = true
+        }
+        
+    }
     @objc func handleTap(){
         view.endEditing(true)
     }
