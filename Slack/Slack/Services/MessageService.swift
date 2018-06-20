@@ -64,7 +64,7 @@ class MessageService{
         messages.removeAll()
     }
     
-    func finaAllMessagesForChannel(channelId: String, completion: @escaping CompletionHandler){
+    func findAllMessagesForChannel(channelId: String, completion: @escaping CompletionHandler){
         
         let header = [
             "Authorization":"Bearer \(AuthService.instance.authToken)",

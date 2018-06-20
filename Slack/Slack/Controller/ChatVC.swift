@@ -8,15 +8,22 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxt: UITextField!
     @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        //dynamic tableview height
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         view.bindToKeyboard()
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
@@ -46,6 +53,11 @@ class ChatVC: UIViewController {
                             if(MessageService.instance.channels.count>0){
                                 MessageService.instance.selectedChannel = MessageService.instance.channels[0]
                                 self.channelNameLbl.text = MessageService.instance.selectedChannel?.channelTitle
+                                MessageService.instance.findAllMessagesForChannel(channelId: (MessageService.instance.selectedChannel?.id)!, completion: { (success) in
+                                    if(success){
+                                        self.tableView.reloadData()
+                                    }
+                                })
                             }
                             else{
                                 self.channelNameLbl.text = "You do not have any channels yet!"
@@ -78,6 +90,7 @@ class ChatVC: UIViewController {
         channelNameLbl.text = MessageService.instance.selectedChannel?.channelTitle
         self.messageTxt.isHidden = false
         self.sendBtn.isHidden = false
+        tableView.reloadData()
         }
         else{
             channelNameLbl.text = "Please Log In!"
@@ -96,6 +109,7 @@ class ChatVC: UIViewController {
                 if(success){
                     self.messageTxt.text = ""
                     self.messageTxt.resignFirstResponder()
+                    
                 }
             })
         }
@@ -105,7 +119,31 @@ class ChatVC: UIViewController {
     @objc func handleTap(){
         view.endEditing(true)
     }
+    
+    //tableView functions
   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as? MessageCell{
+            let message = MessageService.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
+            return cell
+        }
+        else{
+        return UITableViewCell()
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 
    
 

@@ -140,9 +140,11 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let channel = MessageService.instance.channels[indexPath.row]
         MessageService.instance.selectedChannel = channel
-        NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
-        MessageService.instance.finaAllMessagesForChannel(channelId: (MessageService.instance.selectedChannel?.id)!) { (success) in
+        MessageService.instance.clearMessages()
+        
+        MessageService.instance.findAllMessagesForChannel(channelId: (MessageService.instance.selectedChannel?.id)!) { (success) in
             if(success){
+                NotificationCenter.default.post(name: Notification.Name("channelSelected"), object: nil)
                 self.revealViewController().revealToggle(animated: true)
             }
         }

@@ -26,6 +26,7 @@
 		C78D843B20BEC51A003DA2A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D843A20BEC51A003DA2A2 /* Constants.swift */; };
 		C7A7E76C20D9001D00E96AA8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A7E76B20D9001D00E96AA8 /* Message.swift */; };
 		C7A7E76E20D9459200E96AA8 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A7E76D20D9459200E96AA8 /* KeyboardBoundView.swift */; };
+		C7A7E77020D94AFD00E96AA8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A7E76F20D94AFD00E96AA8 /* MessageCell.swift */; };
 		C7EB1FA720BE914700ACBBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB1FA620BE914700ACBBAF /* AppDelegate.swift */; };
 		C7EB1FAC20BE914700ACBBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EB1FAA20BE914700ACBBAF /* Main.storyboard */; };
 		C7EB1FAE20BE914700ACBBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EB1FAD20BE914700ACBBAF /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		C78D843A20BEC51A003DA2A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C7A7E76B20D9001D00E96AA8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C7A7E76D20D9459200E96AA8 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		C7A7E76F20D94AFD00E96AA8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		C7EB1FA320BE914700ACBBAF /* Slack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EB1FA620BE914700ACBBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EB1FAB20BE914700ACBBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				C74845BA20D14653004ADBD9 /* AvatarCell.swift */,
 				C737DC0C20D271FF00C505A5 /* CircleImage.swift */,
 				C70EAFD320D53109002C04E0 /* ChannelCell.swift */,
+				C7A7E76F20D94AFD00E96AA8 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				C70EAFD420D53109002C04E0 /* ChannelCell.swift in Sources */,
 				C70E25AC20CEA71F00DC56A0 /* RoundedButton.swift in Sources */,
 				C70EAFCC20D3EC84002C04E0 /* ProfileVCViewController.swift in Sources */,
+				C7A7E77020D94AFD00E96AA8 /* MessageCell.swift in Sources */,
 				C74845B920D1433E004ADBD9 /* AvatarPickerVCViewController.swift in Sources */,
 				C7A7E76C20D9001D00E96AA8 /* Message.swift in Sources */,
 				C70EAFD220D520C7002C04E0 /* Channel.swift in Sources */,
